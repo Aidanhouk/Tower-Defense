@@ -6,6 +6,9 @@ Developed using C++ and SFML.
 * Shooting towers, support towers, slowing and stopping zones.</br>
 * Buttons to pause and change speed of the game.</br>
 
+# Gameplay:
+https://youtu.be/j-d8kp6v8bA
+
 # Screenshots:
 <img src="images/TD_menu.png"/>
 <img src="images/ezgif.com-gif-maker.gif"/>
