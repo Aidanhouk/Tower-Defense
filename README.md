@@ -8,7 +8,7 @@ Developed using C++ and SFML.
 
 # Screenshots:
 <div class="images1">
-  <img { display:block; } src="images/TD_menu.png" align="left"/>
   <img src="images/TD_wave.png" width = "490" align="left"/>
   <img src="images/TD_effects.png" width = "490" align="right"/>
+  <img src="images/TD_menu.png" align="left"/>
 </div>
