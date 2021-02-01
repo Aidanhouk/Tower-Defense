@@ -9,4 +9,4 @@ Developed using C++ and SFML.
 # Screenshots:
 <img src="images/TD_menu.png" align="left"/>
 <img src="images/ezgif.com-gif-maker.gif" width="550" align="right"/>
-<img src="images/TD_wave.png"/>
+<img src="images/TD_wave.png" width="550"/>
