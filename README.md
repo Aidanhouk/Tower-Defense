@@ -11,6 +11,7 @@ Developed using C++ and SFML.
   <img src="images/TD_wave.png" width = "480" align="left"/>
   <img src="images/TD_effects.png" width = "480" align="right"/>
 </div>
+</br></br>
 <div class="images2">
   <img src="images/TD_menu.png" align="bottom"/>
 </div>
