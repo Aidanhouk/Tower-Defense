@@ -7,6 +7,6 @@ Developed using C++ and SFML.
 * Buttons to pause and change speed of the game.</br>
 
 # Screenshots:
-<img src="images/TD_menu.png" align="left"/>
+<img src="images/TD_menu.png"/>
 <img src="images/ezgif.com-gif-maker.gif" width="550"/>
 <img src="images/TD_wave.png" width="600"/>
