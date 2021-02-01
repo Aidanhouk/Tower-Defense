@@ -8,5 +8,5 @@ Developed using C++ and SFML.
 
 # Screenshots:
 <img src="images/TD_menu.png" align="left"/>
-<img src="images/ezgif.com-gif-maker.gif" align="right"/>
+<img src="images/ezgif.com-gif-maker.gif" width="480" align="right"/>
 <img src="images/TD_wave.png"/>
