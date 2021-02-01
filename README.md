@@ -7,7 +7,5 @@ Developed using C++ and SFML.
 * Buttons to pause and change speed of the game.</br>
 
 # Screenshots:
-<div class="images1">
-  <img src="images/TD_menu.png" align="left"/>
-  <img src="images/TD_wave.png" width = "500" align="right"/>
-</div>
+<img src="images/TD_menu.png"/>
+<img src="images/TD_wave.png" width = "500"/>
