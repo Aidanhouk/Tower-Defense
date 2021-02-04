@@ -62,6 +62,8 @@ void waveBreakCycle(EnemiesWave &enemiesWave, bool &endOfGame, bool &endOfWave)
 
 void setToDefault()
 {
+	// изначальные деньги
+	money = START_MONEY[level];
 	pause = 1;
 	gameSpeed = 0;
 	spawnBreakTimeSummary = 0;

@@ -1,3 +1,5 @@
+#include <SFML/Audio.hpp>
+
 #include "globals.h"
 
 void results(bool &exitGame)

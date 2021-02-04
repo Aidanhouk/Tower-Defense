@@ -40,8 +40,6 @@ void mainGame()
 	// объект магазина
 	Shop shop;
 
-	// изначальные деньги
-	money = START_MONEY[level];
 	// конец игры?
 	bool endOfGame{ 0 };
 	// конец волны?
@@ -55,13 +53,6 @@ void mainGame()
 
 	// сбрасываем некоторые параметры (пауза, скорость игры)
 	setToDefault();
-	
-	// влючаем саундтрек
-	sf::Music music;
-	music.setLoop(true);
-	int musicN{ rand() % 3 + 1 };
-	music.openFromFile("music/song" + std::to_string(musicN) + ".ogg");
-	music.play();
 
 	// главный цикл игры
 	while ((*window).isOpen())
@@ -79,7 +70,7 @@ void mainGame()
 			if (event.type == sf::Event::Closed) {
 				(*window).close();
 			}
-			// если нажата кнопка мыши и игра не закончена
+			// если нажата кнопка мыши
 			if (event.type == sf::Event::MouseButtonPressed) {
 				// 1 переменная для фиксации нажатия на башню/блок для продажи
 				bool towerSelected{ 0 };

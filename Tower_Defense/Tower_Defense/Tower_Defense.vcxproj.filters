@@ -61,6 +61,12 @@
     <Filter Include="Header Files\Field">
       <UniqueIdentifier>{abc5967a-f1d5-4fa4-aa5b-0b01ea7e4ccd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Music">
+      <UniqueIdentifier>{0c838d31-af7e-4e84-813f-356e8e0cfd34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Music">
+      <UniqueIdentifier>{a765c076-c6a1-40ee-b83e-6ec75049ac80}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="enemy.cpp">
@@ -120,6 +126,9 @@
     <ClCompile Include="lastEnemy.cpp">
       <Filter>Source Files\Enemy</Filter>
     </ClCompile>
+    <ClCompile Include="music.cpp">
+      <Filter>Source Files\Music</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="enemiesWave.h">
@@ -178,6 +187,9 @@
     </ClInclude>
     <ClInclude Include="lastEnemy.h">
       <Filter>Header Files\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="music.h">
+      <Filter>Header Files\Music</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

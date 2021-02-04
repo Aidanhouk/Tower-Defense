@@ -1,14 +1,17 @@
-// в заголовке consts.h можно настроить параметры баланса
+#include <thread>
 
 #include "globals.h"
 #include "menu.h"
 #include "mainGame.h"
 #include "results.h"
+#include "music.h"
 
 // скорость игры
 bool gameSpeed;
 // пауза?
 bool pause;
+// закрыть игру?
+bool exitGame{ 0 };
 // результат игры
 int result;
 // какой уровень выбран
@@ -24,9 +27,9 @@ sf::RenderWindow * window;
 
 int main()
 {
-	// закрыть игру?
-	bool exitGame{ 0 };
-
+	Music music;
+	std::thread musicThread(&Music::playMusic, &music);
+	
 	while (1) {
 		// сбрасываем параметры игры
 		result = 0; waveLevel = 0;
@@ -46,6 +49,7 @@ int main()
 			break;
 		}
 	}
+	musicThread.join();
 
 	return 0;
 }

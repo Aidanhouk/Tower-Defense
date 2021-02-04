@@ -148,6 +148,7 @@
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="missiles.cpp" />
     <ClCompile Include="blocksControl.cpp" />
+    <ClCompile Include="music.cpp" />
     <ClCompile Include="nextWave.cpp" />
     <ClCompile Include="results.cpp" />
     <ClCompile Include="roadCell.cpp" />
@@ -170,6 +171,7 @@
     <ClInclude Include="menu.h" />
     <ClInclude Include="missiles.h" />
     <ClInclude Include="blocksControl.h" />
+    <ClInclude Include="music.h" />
     <ClInclude Include="results.h" />
     <ClInclude Include="roadCell.h" />
     <ClInclude Include="shop.h" />
