@@ -39,7 +39,7 @@ protected:
 	EnemiesWave *m_wave;
 public:
 	Enemy(int type, int currentWaveLevel, sf::Texture * enemyTextures[ENEMIES_COUNT], EnemiesWave * wave);
-	~Enemy() {}
+	virtual ~Enemy() {}
 
 	// сбрасываем m_distance и меняем клетку
 	void changePosition();

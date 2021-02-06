@@ -3,14 +3,20 @@
 #include "globals.h"
 #include "beam.h"
 #include "roadCell.h"
-#include "enemy.h"
+
+LastEnemy::~LastEnemy()
+{
+	for (auto & var : m_beams) {
+		delete var;
+	}
+}
 
 void LastEnemy::createEffects()
 {
 	for (auto & var : m_beams) {
 		int xDirection;
 		int yDirection;
-		switch (m_baseEnemy->getDirection())
+		switch (m_direction)
 		{
 		case 1:
 			xDirection = 0;
@@ -29,16 +35,16 @@ void LastEnemy::createEffects()
 			yDirection = 0;
 			break;
 		}
-		double xVector{ xDirection * m_baseEnemy->getDistance() };
-		double yVector{ yDirection * m_baseEnemy->getDistance() };
+		double xVector{ xDirection * m_distance };
+		double yVector{ yDirection * m_distance };
 		int angle{ rand() % 360 };
 		double distanceFromEnemy{ rand() % (int)(W * 1.5) + (double)(W) };
 		double length{ rand() % 30 + 10.f };
 		sf::RectangleShape *beamRect = new sf::RectangleShape(sf::Vector2f(length, 2));
 		double _cos{ cos(angle * 3.14159265 / 180.0) };
 		double _sin{ sin(angle * 3.14159265 / 180.0) };
-		double xPos{ (m_baseEnemy->getPositionEnemy()->getCoordinates().second + 0.5) * W + xVector };
-		double yPos{ (m_baseEnemy->getPositionEnemy()->getCoordinates().first + 0.5) * W + yVector };
+		double xPos{ (m_position->getCoordinates().second + 0.5) * W + xVector };
+		double yPos{ (m_position->getCoordinates().first + 0.5) * W + yVector };
 		(*beamRect).setPosition(xPos + _cos * distanceFromEnemy, yPos - _sin * distanceFromEnemy);
 		(*beamRect).rotate(-angle);
 
@@ -53,7 +59,7 @@ void LastEnemy::moveEffects()
 	for (auto & var : m_beams) {
 		int xDirection;
 		int yDirection;
-		switch (m_baseEnemy->getDirection())
+		switch (m_direction)
 		{
 		case 1:
 			xDirection = 0;
@@ -73,7 +79,7 @@ void LastEnemy::moveEffects()
 			break;
 		}
 		// передвижение вместе с противником
-		(*var).getBeamRect()->move(xDirection * m_baseEnemy->getSpeed(), yDirection * m_baseEnemy->getSpeed());
+		(*var).getBeamRect()->move(xDirection * m_speed, yDirection * m_speed);
 		// сам эффект сближения лучей
 		var->beamsGetCloser();
 	}
@@ -83,12 +89,5 @@ void LastEnemy::drawEffects()
 {
 	for (auto & var : m_beams) {
 		(*window).draw(*var->getBeamRect());
-	}
-}
-
-void LastEnemy::deleteEffects()
-{
-	for (auto & var : m_beams) {
-		delete var;
 	}
 }

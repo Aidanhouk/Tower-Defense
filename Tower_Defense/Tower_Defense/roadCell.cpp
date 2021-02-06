@@ -16,7 +16,6 @@ RoadCell::~RoadCell()
 
 void RoadCell::removeEnemyFromCell(Enemy * enemy)
 {
-	if (m_enemiesOnCell.empty()) { return; }
 	auto enemyIter{ std::find(m_enemiesOnCell.begin(), m_enemiesOnCell.end(), enemy) };
 	if (enemyIter != m_enemiesOnCell.end()) {
 		m_enemiesOnCell.erase(enemyIter);

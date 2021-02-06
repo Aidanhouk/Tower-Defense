@@ -1,20 +1,20 @@
 #pragma once
 
-class Enemy;
+#include "enemy.h"
+
 class Beam;
 
-// класс класс последнего врага
-class LastEnemy
+// класс последнего врага
+class LastEnemy : public Enemy
 {
 private:
-	// указатель на базового врага
-	Enemy * m_baseEnemy;
 	// лучи для эффектов
 	Beam *m_beams[100];
 public:
+	// конструктор копирует врага
 	LastEnemy(Enemy * enemy)
-		: m_baseEnemy{ enemy } {}
-	~LastEnemy() {}
+		: Enemy(*enemy) {}
+	virtual ~LastEnemy();
 
 	// создание лучей
 	void createEffects();
@@ -22,6 +22,4 @@ public:
 	void moveEffects();
 	// отрисовка лучей
 	void drawEffects();
-	// освобождение памяти под лучи
-	void deleteEffects();
 };
