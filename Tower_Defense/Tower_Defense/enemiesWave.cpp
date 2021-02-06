@@ -42,8 +42,6 @@ void EnemiesWave::spawnNextEnemy(RoadCell * cellToSpawn)
 void EnemiesWave::cleanWave()
 {
 	if (lastEnemy) {
-		lastEnemy->deleteEffects();
-		delete lastEnemy;
 		lastEnemy = nullptr;
 	}
 	for (auto & var : m_enemiesList) {
@@ -113,6 +111,10 @@ void EnemiesWave::drawLastEnemyEffects()
 		for (auto & var : m_enemiesList) {
 			if (var->getIsAlive()) {
 				lastEnemy = new LastEnemy(var);
+				var->getPositionEnemy()->removeEnemyFromCell(var);
+				var->getPositionEnemy()->setEnemyOnCell(lastEnemy);
+				delete var;
+				var = lastEnemy;
 				lastEnemy->createEffects();
 			}
 		}

@@ -27,6 +27,7 @@ sf::RenderWindow * window;
 
 int main()
 {
+	// включаем музыку
 	Music music;
 	std::thread musicThread(&Music::playMusic, &music);
 	

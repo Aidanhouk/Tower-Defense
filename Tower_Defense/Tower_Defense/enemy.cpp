@@ -46,7 +46,7 @@ void Enemy::setDirection(RoadCell * currentPosition)
 
 void Enemy::changePosition()
 {
-	m_distance = 0;
+	m_distance -= W;
 	// удал€ем с текущей клетки врага
 	m_position->removeEnemyFromCell(this);
 	// переходим на следующую €чейку
