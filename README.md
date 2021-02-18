@@ -7,7 +7,7 @@ Developed using C++ and SFML.
 * Buttons to pause and change speed of the game.</br>
 
 # Gameplay:
-https://youtu.be/j-d8kp6v8bA
+https://youtu.be/k8cjqXH8L4s
 
 # Screenshots:
 <img src="images/TD_menu.png"/>
